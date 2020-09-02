@@ -68,5 +68,4 @@ void SLCrypt::decryptString(std::string in, std::string key, std::string &out)
 
 	out = std::string(reinterpret_cast<char*>(decryptedBytes.data()), decryptedBytes.size());
 	return;
-}n;
 }
