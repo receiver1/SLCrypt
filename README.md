@@ -21,16 +21,15 @@ The size of the key and the initialization vector is equal `blockBytesLen`, by d
 #### Example of usage
 ```C++
 // Of string encryption:
-std::string key = "-128-bytes-key-";
-std::string out;
-
 SLCrypt slCrypt;
+std::string key = "-128-bytes-key-";
+
+std::string out;
 slCrypt.encryptString("string", key, out);
 std::cout << "Encrypted string -> " << out << "\n";
 
 // Of string decryption:
 std::string in;
-SLCrypt slCrypt;
 slCrypt.encryptString(out, key, in);
 std::cout << "Decrypted string -> " << in << "\n";
 ```
@@ -55,16 +54,15 @@ ___
 #### Пример использования:
 ```C++
 // С шифрованием строки:
-std::string key = "-128-bytes-key-";
-std::string out;
-
 SLCrypt slCrypt;
+std::string key = "-128-bytes-key-";
+
+std::string out;
 slCrypt.encryptString("string", key, out);
 std::cout << "Encrypted string -> " << out << "\n";
 
 // С дешифрованием строки:
 std::string in;
-SLCrypt slCrypt;
 slCrypt.encryptString(out, key, in);
 std::cout << "Decrypted string -> " << in << "\n";
 ```
