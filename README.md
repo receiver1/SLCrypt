@@ -4,7 +4,7 @@
 #### Description:
 Class for encrypting and decrypting text using a key and an initialization vector.\
 The size of the key and the initialization vector is equal `blockBytesLen`, by default it is 128 bytes.
-#### How does it work
+#### How does it work:
 * Encryption:
   * We split the string into blocks, each 128 bytes
   * Generate an initialization vector (random letters, 128 bytes)
@@ -18,7 +18,7 @@ The size of the key and the initialization vector is equal `blockBytesLen`, by d
   * For each byte of string, we decrement the byte\
     of the initialization vector and increment the byte of the key
   
-#### Example of usage
+#### Example of usage \<C++>:
 ```C++
 SLCrypt slCrypt;
 std::string key = "-128-bytes-key-";
@@ -32,6 +32,19 @@ std::cout << "Encrypted string -> " << out << "\n";
 std::string in;
 slCrypt.encryptString(out, key, in);
 std::cout << "Decrypted string -> " << in << "\n";
+```
+#### Example of usage \<PHP>:
+```PHP
+$slCrypt = new SLCrypt();
+$key = "-128-bytes-key-";
+
+// Of string encryption:
+$out = $slCrypt->encryptString("string", $key);
+print $out;
+
+// Of string decryption:
+$in = $slCrypt->encryptString($out, $key);
+print $in;
 ```
 ___
 ## Russian branch
@@ -51,7 +64,7 @@ ___
   * Разбиваем строку на блоки, каждый по 128 байт
   * Каждому байту строки декрементируем байт\
 		вектора инициализации и инкрементируем байт ключа
-#### Пример использования:
+#### Пример использования \<C++>:
 ```C++
 SLCrypt slCrypt;
 std::string key = "-128-bytes-key-";
@@ -65,4 +78,17 @@ std::cout << "Encrypted string -> " << out << "\n";
 std::string in;
 slCrypt.encryptString(out, key, in);
 std::cout << "Decrypted string -> " << in << "\n";
+```
+#### Пример использования \<PHP>:
+```PHP
+$slCrypt = new SLCrypt();
+$key = "-128-bytes-key-";
+
+// С шифрованием строки:
+$out = $slCrypt->encryptString("string", $key);
+print $out;
+
+// С дешифрованием строки:
+$in = $slCrypt->encryptString($out, $key);
+print $in;
 ```
