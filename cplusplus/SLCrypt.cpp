@@ -1,13 +1,6 @@
 
 #include "SLCrypt.hpp"
 
-void printHexArray(unsigned char a[], unsigned int n)
-{
-	for (unsigned int i = 0; i < n; i++) {
-		printf("%02x ", a[i]);
-	}
-}
-
 void SLCrypt::generateInitVector(std::vector<uint8_t> &out)
 {
 	out.clear();
@@ -39,8 +32,8 @@ void SLCrypt::encryptString(std::string in, std::string key, std::string &out)
 		}
 	}
 
-	out = std::string(reinterpret_cast<char*>(init_vector.data()), init_vector.size())
-		+ std::string(reinterpret_cast<char*>(encryptedBytes.data()), encryptedBytes.size());
+	out = std::string(init_vector.begin(), init_vector.end());
+	out += std::string(encryptedBytes.begin(), encryptedBytes.end());
 	return;
 }
 
@@ -66,6 +59,6 @@ void SLCrypt::decryptString(std::string in, std::string key, std::string &out)
 		}
 	}
 
-	out = std::string(reinterpret_cast<char*>(decryptedBytes.data()), decryptedBytes.size());
+	out = std::string(decryptedBytes.begin(), decryptedBytes.end());
 	return;
 }
