@@ -17,4 +17,3 @@ new in[128];
 slCrypt_decryptString(out, key, in);
 printf("Decrypted string -> %s", in);
 ```
-___
