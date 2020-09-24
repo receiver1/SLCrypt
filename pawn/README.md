@@ -1,5 +1,5 @@
 # SLCrypt
-#### Example of usage <\Pawn\>:
+#### Example of usage \<Pawn\>:
 ```C++
 native slCrypt_encryptString(input[], key[], out[]);
 native slCrypt_decryptString(input[], key[], out[]);
