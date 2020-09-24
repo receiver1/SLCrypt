@@ -16,32 +16,3 @@ The size of the key and the initialization vector is equal `blockBytesLen`, by d
   * For each byte of string, we decrement the byte\
     of the initialization vector and increment the byte of the key
   
-#### Example of usage \<C++>:
-```C++
-SLCrypt slCrypt;
-std::string key = "-128-bytes-key-";
-
-// Of string encryption:
-std::string out;
-slCrypt.encryptString("string", key, out);
-std::cout << "Encrypted string -> " << out << "\n";
-
-// Of string decryption:
-std::string in;
-slCrypt.encryptString(out, key, in);
-std::cout << "Decrypted string -> " << in << "\n";
-```
-#### Example of usage \<PHP>:
-```PHP
-$slCrypt = new SLCrypt();
-$key = "-128-bytes-key-";
-
-// Of string encryption:
-$out = $slCrypt->encryptString("string", $key);
-print $out;
-
-// Of string decryption:
-$in = $slCrypt->encryptString($out, $key);
-print $in;
-```
-___
