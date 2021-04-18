@@ -2,7 +2,7 @@
 #### Example of usage \<C++>:
 ```C++
 SLCrypt slCrypt;
-std::string key = "-128-bytes-key-";
+std::string key = "-128-bits-key-";
 
 // Of string encryption:
 std::string out;
