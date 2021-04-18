@@ -2,7 +2,7 @@
 #### Example of usage \<PHP>:
 ```PHP
 $slCrypt = new SLCrypt();
-$key = "-128-bytes-key-";
+$key = "-128-bits-key-";
 
 // Of string encryption:
 $out = $slCrypt->encryptString("string", $key);
