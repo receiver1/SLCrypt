@@ -5,7 +5,7 @@ native slCrypt_encryptString(input[], key[], out[]);
 native slCrypt_decryptString(input[], key[], out[]);
 
 // Somewhere in function...
-new key[16] = "-128-bytes-key-";
+new key[16] = "-128-bits-key-";
 
 // Of string encryption:
 new out[128];
