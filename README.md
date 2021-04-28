@@ -1,3 +1,5 @@
+![Mode: ECB, CBC](https://img.shields.io/badge/Mode-ECB%2C%20CBC-red)
+![Padding: Null](https://img.shields.io/badge/Padding-Null-blue)
 # SLCrypt
 #### Description:
 Class for encrypting and decrypting text using a key and an initialization vector.\
