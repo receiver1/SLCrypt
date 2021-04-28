@@ -4,21 +4,20 @@
 #include "SLCrypt.hpp"
 
 /*
-* Output: "> Passed in 21999 ms"
+* Output: "> Passed in 1458 ms"
 */
-
 int main()
 {
     std::string strInput = "Hello world!";
     std::string strKey = "1234567890123456";
     std::string strOutput;
 
-    SLCrypt::Encryption<MODE_EBC> crypt;
-    crypt.setBlockSize(64);
+    SLCrypt::Encryption<MODE_ECB> crypt;
+    crypt.setBlockSize(128);
 
     auto beginTick = std::chrono::high_resolution_clock::now();
 
-    for (size_t i = 0; i < 0xFFFFF; ++i)
+    for (size_t i = 0; i < 0xFFFF; ++i)
     {
         crypt.encryptString(strInput, strKey, strOutput);
         crypt.decryptString(strOutput, strKey, strOutput);
