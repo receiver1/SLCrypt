@@ -5,13 +5,25 @@
 #include <random>
 #include <chrono>
 
-class SLCrypt 
+enum eMode
 {
-	public:
-		void generateInitVector(std::vector<uint8_t> &out);
-		void encryptString(std::string in, std::string key, std::string &out);
-		void decryptString(std::string in, std::string key, std::string &out);
+	MODE_ECB,
+	MODE_CBC
+};
 
-	private:
-		uint8_t blockBytesLen = 16;
+class SLCrypt
+{
+	uint8_t blockBytesLen = 16;
+public:
+	void setBlockSize(std::size_t size);
+	void generateInitVector(std::vector<uint8_t> &out);
+	template<eMode T> class Encryption;
+};
+
+template<eMode T>
+class SLCrypt::Encryption : public SLCrypt
+{
+public:
+	void encryptString(std::string in, std::string key, std::string &out);
+	void decryptString(std::string in, std::string key, std::string &out);
 };
