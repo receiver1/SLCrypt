@@ -1,4 +1,4 @@
-## Russian branch
+## Russian branch ![Режим: ECB, CBC](https://img.shields.io/badge/Режим-ECB%2C%20CBC-red) ![Набивка: Null](https://img.shields.io/badge/Набивка-Нули-blue)
 #### Описание:
 Класс для шифрования и дешифрования текста с использованием ключа и вектора иницализации.\
 Размер ключа и вектора инициализации равен `blockBytesLen`, по стандарту это 128 бит.
