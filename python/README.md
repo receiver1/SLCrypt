@@ -1,3 +1,4 @@
+![Deprecated](https://img.shields.io/badge/-Deprecated-critical)
 # SLCrypt
 #### Example of usage \<Python>:
 ```Python
