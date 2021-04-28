@@ -1,4 +1,4 @@
-# SLCrypt
+# SLCrypt ![Deprecated](https://img.shields.io/badge/-Deprecated-critical)
 #### Example of usage \<Pawn\>:
 ```C++
 native slCrypt_encryptString(input[], key[], out[]);
