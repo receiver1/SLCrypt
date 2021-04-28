@@ -1,7 +1,7 @@
 # SLCrypt ![Mode: ECB, CBC](https://img.shields.io/badge/Mode-ECB%2C%20CBC-red) ![Padding: Null](https://img.shields.io/badge/Padding-Null-blue)
 #### Description:
 Class for encrypting and decrypting text using a key and an initialization vector.\
-The size of the key and the initialization vector is equal `blockBytesLen`, by default it is 128 bits.
+The size of the key and the initialization vector is equal `blockBytesLen`, by default it is 128 bits.\
 You can set the length of block manually using setBlockSize method. (the length is in bits)
 #### How does it work (ECB):
 * Encryption:
