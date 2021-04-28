@@ -1,5 +1,4 @@
-![Deprecated](https://img.shields.io/badge/-Deprecated-critical)
-# SLCrypt
+# SLCrypt ![Deprecated](https://img.shields.io/badge/-Deprecated-critical)
 #### Example of usage \<Python>:
 ```Python
 slcrypt = SLCrypt()
