@@ -1,6 +1,6 @@
 # SLCrypt
 #### Example of usage \<C++>:
-```C++
+```cpp
 SLCrypt::Encryption<MODE_ECB> slCrypt;
 std::string key = "-128-bits-key-";
 
