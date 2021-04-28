@@ -1,7 +1,7 @@
 # SLCrypt
 #### Example of usage \<C++>:
 ```C++
-SLCrypt slCrypt;
+SLCrypt::Encryption<MODE_ECB> slCrypt;
 std::string key = "-128-bits-key-";
 
 // Of string encryption:
@@ -11,6 +11,6 @@ std::cout << "Encrypted string -> " << out << "\n";
 
 // Of string decryption:
 std::string in;
-slCrypt.encryptString(out, key, in);
+slCrypt.decryptString(out, key, in);
 std::cout << "Decrypted string -> " << in << "\n";
 ```
