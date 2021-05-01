@@ -111,7 +111,7 @@ void SLCrypt::Encryption<MODE_CBC>::decryptString(std::string in, std::string ke
 	std::vector<uint8_t> inByte(in.begin(), in.end()),
 		key_byte(key.begin(), key.end()), initVector(iv.begin(), iv.end()), decryptedBytes;
 
-	size_t lastBlock = std::max<int64_t>(inByte.size() - blockBytesLen, 0LL);
+	size_t lastBlock = std::max<intptr_t>(inByte.size() - blockBytesLen, 0LL);
 	size_t paddingLength = inByte.size() / blockBytesLen;
 	for (size_t a = paddingLength; a != ~size_t(); --a) {
 		for (size_t b = blockBytesLen; b != ~size_t() ; --b) {
